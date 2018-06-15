@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DHBWSmartHomeBot", "DHBWSmartHomeBot\DHBWSmartHomeBot.pyproj", "{67E126B8-5CC1-4451-835A-B791B9B4815E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67E126B8-5CC1-4451-835A-B791B9B4815E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E126B8-5CC1-4451-835A-B791B9B4815E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C82703AC-7683-49E8-A7F4-676F5D6CF1D7}
+	EndGlobalSection
+EndGlobal
