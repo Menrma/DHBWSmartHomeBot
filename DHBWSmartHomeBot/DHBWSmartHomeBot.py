@@ -6,7 +6,7 @@ import time
 from DialogManager import DialogManager
 
 # Global variable for token
-TOKEN = ""
+TOKEN = "542816705:AAH0Rrs35x0Dk9toxrY8HJ849mNxZSgbY9w"
 # Global variable for URL
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
@@ -80,7 +80,7 @@ def main2():
 	last_update_id = None
 	while True:
 		currentUpdates = get_updates(last_update_id)
-		if len(currentUpdates["result"]) > 0:
+		if "result" in currentUpdates and len(currentUpdates["result"]) > 0:
 			last_update_id = get_offset(currentUpdates) + 1
 			echo_all_users(currentUpdates)
 		time.sleep(1.0)

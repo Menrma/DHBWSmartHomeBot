@@ -43,6 +43,7 @@ class DialogManager(object):
 			print("Antwort: {}\n\n".format(response))
 		else:
 			# something went wrong with the frame
+			response = "Ich habe Sie leider nicht verstanden."
 			print("Antwort: Ich habe Sie leider nicht verstanden.\n\n")
 
 		return response
@@ -53,10 +54,10 @@ class DialogManager(object):
 	def __checkFrameComplete(self):
 		if self.__frame.Room and self.__frame.Item:
 			if not self.__frame.IsQuestion and self.__frame.State or self.__frame.IsQuestion:
-				if self.__frame.ItemInRoom:
-					self.__frame.IsComplete = True
-				else:
-					self.__frame.IsComplete = False
+				#if self.__frame.ItemInRoom:
+				self.__frame.IsComplete = True
+				#else:
+				#	self.__frame.IsComplete = False
 			else:
 				self.__frame.IsComplete = False
 		else:

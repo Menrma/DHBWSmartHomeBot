@@ -10,10 +10,10 @@ class Responder(object):
 		# check if frame is complete
 		self.__frame = frame
 		
-		if not self.__frame.IsComplete:
-			return self.__parsedMessageNotComplete()
-		elif not self.__frame.ItemInRoom:
+		if not self.__frame.ItemInRoom and self.__frame.Item and self.__frame.Room:
 			return self.__choosenItemNotInRoom()
+		elif not self.__frame.IsComplete:
+			return self.__parsedMessageNotComplete()
 		else:
 			return self.__messageOkay()
 
@@ -36,6 +36,7 @@ class Responder(object):
 				return "Wie ist der Status des Gegenstand?"
 
 	def __choosenItemNotInRoom(self):
+		self.__frame.FurtherInformationRequired = False
 		return "Der Gegenstand {} befindet sich nicht in Raum {}".format(self.__frame.Item.title(), self.__frame.Room.title())
 
 	def __messageOkay(self):
@@ -55,7 +56,7 @@ class Responder(object):
 				bezeichner = "in"
 			else:
 				bezeichner = "im"
-
-		answer = "{} {} {} ist {}".format(self.__frame.Item.title(), bezeichner, self.__frame.Room.title(), self.__frame.State)
+			answer = "{} {} {} ist {}".format(self.__frame.Item.title(), bezeichner, self.__frame.Room.title(), self.__frame.State)
+		
 		answer = answer.strip()
 		return answer
