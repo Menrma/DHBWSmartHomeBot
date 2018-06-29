@@ -6,7 +6,7 @@ import time
 from DialogManager import DialogManager
 
 # Global variable for token
-TOKEN = "542816705:AAH0Rrs35x0Dk9toxrY8HJ849mNxZSgbY9w"
+TOKEN = ""
 # Global variable for URL
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
